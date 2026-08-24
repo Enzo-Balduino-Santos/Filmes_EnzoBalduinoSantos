@@ -1,0 +1,26 @@
+GET http://localhost:3067
+
+###
+POST http://localhost:3067/create
+Content-Type: application/json
+
+{
+    "title": "Transformados por Bomba",
+    "gender": "Aventura",
+    "duration": "144",
+    "ageRating": "0"
+}
+
+###
+DELETE http://localhost:3067/delete/6
+
+###
+PUT http://localhost:3067/update/8
+Content-Type: application/json
+
+{
+    "title": "O Hobbit",
+    "gender": "Comédia Romântica",
+    "duration": "40",
+    "ageRating": "14"
+}

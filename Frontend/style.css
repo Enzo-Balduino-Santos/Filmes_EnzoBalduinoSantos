@@ -1,0 +1,16 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.filmes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+div {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 20px;
+}
