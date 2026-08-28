@@ -1,6 +1,6 @@
 async function buscarFilmes() {
     // acessar a rota GET do backend e exibir os filmes na tela
-    const resposta = await fetch("https://localhost:3067/")
+    const resposta = await fetch("https://filmes-enzo-balduino-santos.vercel.app/")
     const filmes = await resposta.json()
     const sectionFilmes = document.querySelector(".filmes")
 
