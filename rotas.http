@@ -15,12 +15,12 @@ Content-Type: application/json
 DELETE http://localhost:3067/delete/6
 
 ###
-PUT http://localhost:3067/update/8
+PUT http://localhost:3067/update/2
 Content-Type: application/json
 
 {
-    "title": "O Hobbit",
-    "gender": "Comédia Romântica",
-    "duration": "40",
-    "ageRating": "14"
+    "title": "Marção de Deus",
+    "gender": "Desconhecido",
+    "duration": "10",
+    "ageRating": "0"
 }

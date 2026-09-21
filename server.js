@@ -15,7 +15,7 @@ app.get("/", (request, response) => {
     sql.query(selectCommand, (error, data) => {
         if (error) {
             console.log(error)
-            return
+            return response.status(500).json({ message: "Erro no servidor" })
         }
 
         response.json(data)
@@ -30,7 +30,7 @@ app.post("/create", (request, response) => {
     sql.query(insertCommand, [title, gender, duration, ageRating], (error) => {
         if (error) {
             console.log(error)
-            return
+            return response.status(500).json({ message: "Erro no servidor" })
         }
 
         response.status(201).json({
@@ -47,7 +47,7 @@ app.delete("/delete/:id", (request, response) => {
     sql.query(deleteCommand, [id], (error) => {
         if (error) {
             console.log(error)
-            return
+            return response.status(500).json({ message: "Erro no servidor" })
         }
 
         response.json({
@@ -66,7 +66,7 @@ app.put("/update/:id", async (request, response) => {
     sql.query(updateCommand, [title, gender, duration, ageRating, id], (error) => {
         if (error) {
             console.log(error)
-            return
+            return response.status(500).json({ message: "Erro no servidor" })
         }
 
         response.json({

@@ -3,13 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Frontend Filmes</title>
 </head>
 <body>
-    <h1>Lista de Filmes</h1>
+    <header>
+        <h1>Filmes</h1>
+        <button id="btn-novo" type="button">Novo filme</button>
+    </header>
 
     <section class="filmes"></section>
+
+    <dialog id="modal">
+        <form id="form-filme">
+            <h2 id="modal-titulo">Novo filme</h2>
+
+            <label>Título
+                <input type="text" name="title" required>
+            </label>
+            <label>Gênero
+                <input type="text" name="gender" required>
+            </label>
+            <label>Duração (minutos)
+                <input type="number" name="duration" min="1" required>
+            </label>
+            <label>Classificação indicativa (anos)
+                <input type="number" name="ageRating" min="0" value="0" required>
+            </label>
+
+            <div class="acoes">
+                <button type="button" id="btn-cancelar">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
